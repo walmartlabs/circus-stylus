@@ -171,6 +171,70 @@ describe('loader integration', function() {
     });
   });
 
+  it('should import from components', function(done) {
+    var vendorEntry = path.resolve(__dirname + '/fixtures/stylus.js'),
+        entry = path.resolve(__dirname + '/fixtures/require.js');
+
+    outputDir = 'tmp/';
+
+    var config = {
+      context: __dirname,
+      entry: vendorEntry,
+      output: {
+        component: 'vendor',
+
+        path: outputDir + '/vendor',
+        filename: 'vendor.js',
+
+      },
+      stylus: {
+        includesDir: __dirname + '/fixtures/styles/includes/**/*.styl',
+        remap: function(file) {
+          return file.replace(/fixtures\//, '');
+        }
+      }
+    };
+    config = CircusStylus.config(config);
+    config = Circus.config(config);
+
+    webpack(config, function(err, status) {
+      expect(err).to.not.exist;
+
+      var compilation = status.compilation;
+      expect(compilation.errors).to.be.empty;
+      expect(compilation.warnings).to.be.empty;
+
+      var config = {
+        entry: entry,
+
+        output: {
+          path: outputDir
+        },
+
+        resolve: {
+          modulesDirectories: [
+            outputDir
+          ]
+        }
+      };
+      config = CircusStylus.config(config);
+      config = Circus.config(config);
+
+      webpack(config, function(err, status) {
+        expect(err).to.not.exist;
+
+        var compilation = status.compilation;
+        expect(compilation.errors).to.be.empty;
+        expect(compilation.warnings).to.be.empty;
+
+        var output = Fs.readFileSync(outputDir + '/0.bundle.css').toString();
+        expect(output).to.match(/\.red \{/);
+
+        done();
+      });
+    });
+  });
+
   describe('StylusIncludePlugin', function() {
     var sandbox;
     beforeEach(function() {
