@@ -2,7 +2,13 @@
 
 ## Development
 
-[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.0...master)
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.1...master)
+
+## v0.2.1 - January 8th, 2015
+- [#3](https://github.com/walmartlabs/circus-stylus/issues/3) - Verify that loaders operate correctly ([@kpdecker](https://api.github.com/users/kpdecker))
+- Move includes dir and copy all files by default - 41f707c
+
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.0...v0.2.1)
 
 ## v0.2.0 - January 8th, 2015
 - Resolve urls embedded in stylus sheets - 4774a46
