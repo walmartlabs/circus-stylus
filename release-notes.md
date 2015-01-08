@@ -2,7 +2,12 @@
 
 ## Development
 
-[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.1.1...master)
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.0...master)
+
+## v0.2.0 - January 8th, 2015
+- Resolve urls embedded in stylus sheets - 4774a46
+
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.1.1...v0.2.0)
 
 ## v0.1.1 - December 24th, 2014
 - Resolve includeDir relative to the project context - 3c30f54
