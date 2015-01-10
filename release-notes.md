@@ -2,7 +2,13 @@
 
 ## Development
 
-[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.1...master)
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.2...master)
+
+## v0.2.2 - January 10th, 2015
+- Add webpack-core dependency - f4037fc
+- Use http tunnel for package resolution - 9ad1feb
+
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.1...v0.2.2)
 
 ## v0.2.1 - January 8th, 2015
 - [#3](https://github.com/walmartlabs/circus-stylus/issues/3) - Verify that loaders operate correctly ([@kpdecker](https://api.github.com/users/kpdecker))
