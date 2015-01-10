@@ -20,7 +20,7 @@
     "lodash": "^2.4.1",
     "nib": "^1.0.4",
     "stylus": "^0.49.3",
-    "stylus-loader": "git+ssh://git@github.com:kpdecker/stylus-loader.git"
+    "stylus-loader": "git+https://github.com/kpdecker/stylus-loader.git"
   },
   "devDependencies": {
     "chai": "^1.10.0",
