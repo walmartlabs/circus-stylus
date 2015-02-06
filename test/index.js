@@ -72,6 +72,8 @@ describe('loader integration', function() {
 
       expect(Object.keys(compilation.assets).sort()).to.eql([
         '0.bundle.css',
+        'bootstrap.js',
+        'bootstrap.js.map',
         'bundle.js',
         'bundle.js.map',
         'circus.json',
@@ -123,6 +125,8 @@ describe('loader integration', function() {
 
       expect(Object.keys(compilation.assets).sort()).to.eql([
         '0.bundle.css',
+        'bootstrap.js',
+        'bootstrap.js.map',
         'bundle.js',
         'bundle.js.map',
         'circus.json',
@@ -163,7 +167,14 @@ describe('loader integration', function() {
       expect(compilation.errors).to.be.empty;
       expect(compilation.warnings).to.be.empty;
 
-      expect(Object.keys(compilation.assets)).to.eql(['bundle.js', '0.bundle.css', 'circus.json', 'bundle.js.map']);
+      expect(Object.keys(compilation.assets).sort()).to.eql([
+        '0.bundle.css',
+        'bootstrap.js',
+        'bootstrap.js.map',
+        'bundle.js',
+        'bundle.js.map',
+        'circus.json'
+      ]);
 
       // Verify the actual css content
       var output = Fs.readFileSync(outputDir + '/0.bundle.css').toString();
