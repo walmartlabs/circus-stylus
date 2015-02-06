@@ -2,7 +2,13 @@
 
 ## Development
 
-[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.2...master)
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v1.0.0...master)
+
+## v1.0.0 - February 6th, 2015
+- Update tests for Circus 2.0 - 9f88262
+- Add test for published files - 2bf4acf
+
+[Commits](https://github.com/walmartlabs/circus-stylus/compare/v0.2.2...v1.0.0)
 
 ## v0.2.2 - January 10th, 2015
 - Add webpack-core dependency - f4037fc
