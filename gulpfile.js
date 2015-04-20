@@ -11,18 +11,18 @@ var mochaTests = [
 ];
 
 gulp.task('eslint', function() {
-  return gulp.src(source)
+  return gulp.src(Array.prototype.concat(source, mochaTests))
     .pipe(eslint())
     .pipe(eslint.format('stylish'))
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('mocha', function() {
+gulp.task('mocha', ['lint'], function() {
   return gulp.src(mochaTests, {read: false})
       .pipe(mocha());
 });
 
-gulp.task('coverage', function(done) {
+gulp.task('coverage', ['lint'], function(done) {
   gulp.src(source)
     .pipe(istanbul())
     .pipe(istanbul.hookRequire())

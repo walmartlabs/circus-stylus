@@ -133,7 +133,7 @@ describe('loader integration', function() {
         'bundle.js.map',
         'circus.json',
         'styles/includes/red.styl',
-        'styles/includes/url.gif',
+        'styles/includes/url.gif'
       ]);
 
       var input = Fs.readFileSync(__dirname + '/fixtures/styles/includes/red.styl').toString(),
@@ -199,8 +199,7 @@ describe('loader integration', function() {
         component: 'vendor',
 
         path: outputDir + '/vendor',
-        filename: 'vendor.js',
-
+        filename: 'vendor.js'
       },
       stylus: {
         includesDir: __dirname + '/fixtures/styles/includes/**/*',
@@ -261,8 +260,7 @@ describe('loader integration', function() {
         component: 'vendor',
 
         path: outputDir + '/vendor',
-        filename: 'vendor.js',
-
+        filename: 'vendor.js'
       },
       stylus: {
         includesDir: __dirname + '/fixtures/styles/includes/**/*',
