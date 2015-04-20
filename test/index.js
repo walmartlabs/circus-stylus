@@ -72,6 +72,7 @@ describe('loader integration', function() {
 
       expect(Object.keys(compilation.assets).sort()).to.eql([
         '0.bundle.css',
+        '0.bundle.css.map',
         'bootstrap.js',
         'bootstrap.js.map',
         'bundle.js',
@@ -125,6 +126,7 @@ describe('loader integration', function() {
 
       expect(Object.keys(compilation.assets).sort()).to.eql([
         '0.bundle.css',
+        '0.bundle.css.map',
         'bootstrap.js',
         'bootstrap.js.map',
         'bundle.js',
@@ -169,6 +171,7 @@ describe('loader integration', function() {
 
       expect(Object.keys(compilation.assets).sort()).to.eql([
         '0.bundle.css',
+        '0.bundle.css.map',
         'bootstrap.js',
         'bootstrap.js.map',
         'bundle.js',
