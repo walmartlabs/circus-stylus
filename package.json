@@ -21,7 +21,7 @@
     "nib": "^1.0.4",
     "stylus": "^0.49.3",
     "stylus-loader": "git+https://github.com/kpdecker/stylus-loader.git",
-    "webpack-core": "^0.4.8"
+    "webpack-core": "^0.6.9"
   },
   "devDependencies": {
     "chai": "^1.10.0",
